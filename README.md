@@ -1,4 +1,4 @@
-# ⚡ Zero to Splunk TA: GenAI Deployment Framework
+# ⚡ Open AI Splunk TA: GenAI Deployment Framework
 
 [![Python](https://img.shields.io/badge/Python-3.9%2B-blue.svg)](https://python.org)
 [![OpenAI](https://img.shields.io/badge/OpenAI-API-black.svg)](https://openai.com/)
@@ -6,7 +6,7 @@
 
 ## Overview
 
-**Zero to Splunk TA** is an AI deployment accelerator built to help Systems Integrators (SIs) and enterprise engineering teams transform API documentation into production-ready Splunk Technology Add-ons (TAs) in minutes, not days. 
+**OpenAI Splunk TA** is an AI deployment accelerator built to help Systems Integrators (SIs) and enterprise engineering teams transform API documentation into production-ready Splunk Technology Add-ons (TAs) in minutes, not days. 
 
 By leveraging the **OpenAI API** and advanced prompt chaining, this framework codifies architectural best practices into a repeatable, automated pipeline. It mentors technical teams toward self-sufficiency by removing the friction of manual Python scripting and regex formulation, accelerating customer time-to-value for complex data ingest pipelines.
 
@@ -128,6 +128,22 @@ Run the CLI tool and pass the target API documentation or JSON spec:
 ```
 
 The framework will process the spec and output a ready-to-deploy folder in the ./build directory.
+
+### Configuration and API keys
+We support both OpenAI API and Azure OpenAI API ( see .env.example ) 
+```plain
+# --- OpenAI Direct ---
+OPENAI_API_KEY=sk-proj-xxxx...
+OPENAI_MODEL=gpt-4o
+
+# --- Azure OpenAI (Prioritized if uncommented) ---
+AZURE_OPENAI_API_KEY=your-key
+AZURE_OPENAI_ENDPOINT=https://your-endpoint.cognitiveservices.azure.com/
+AZURE_OPENAI_API_VERSION=2024-12-01-preview
+AZURE_OPENAI_DEPLOYMENT_NAME=gpt-5.4-mini-3
+```
+
+
 
 
 ### Output
