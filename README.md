@@ -92,11 +92,14 @@ An active OpenAI API Key (or Azure OpenAI endpoint credentials)
 git clone [https://github.com/abokov/zero-to-splunk-ta-openai.git](https://github.com/abokov/zero-to-splunk-ta-openai.git)
 cd zero-to-splunk-ta-openai
 ```
+
 2. Install dependencies:
 
 ```Bash
 pip install -r requirements.txt
 ```
+
+
 3. Configure your environment:
 
 ```Bash
