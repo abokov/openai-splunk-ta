@@ -7,6 +7,10 @@ from jinja2 import Environment, FileSystemLoader
 # Import our custom modules
 from openai_client import generate_ta_code
 
+# Import the new helper at the top of main.py
+from token_helper import count_tokens, estimate_cost
+
+
 def main():
     parser = argparse.ArgumentParser(description="Zero to Splunk TA: AI Deployment Framework")
     parser.add_argument("--spec", required=True, help="Path to the API documentation or spec file")
@@ -19,6 +23,14 @@ def main():
     if not os.getenv("OPENAI_API_KEY"):
         print("Error: OPENAI_API_KEY environment variable not set. Please add it to your .env file.")
         return
+
+ 
+    # Log token usage before the API call!
+    input_tokens = count_tokens(api_spec_content)
+    est_cost = estimate_cost(input_tokens)
+    print(f"📊 Analyzing API Spec: {input_tokens:,} tokens (Est. Input Cost: ${est_cost:.5f})")
+    
+    print("🚀 Calling OpenAI API...")
 
     # 1. Read API Spec
     try:
