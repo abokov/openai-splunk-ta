@@ -117,7 +117,7 @@ pip install -r requirements.txt
 
 ```Bash
 cp .env.example .env
-# Edit .env and add your OPENAI_API_KEY```
+# Edit .env and add your OPENAI_API_KEY or Azure OpenAI API
 ```
 
 4.  Usage
@@ -127,21 +127,7 @@ Run the CLI tool and pass the target API documentation or JSON spec:
  python src/main.py --spec ./examples/test_api.md --output ./build/MyCustomTA
 ```
 
-The framework will process the spec and output a ready-to-deploy folder in the ./build directory.
-
-### Configuration and API keys
-We support both OpenAI API and Azure OpenAI API ( see .env.example ) 
-```plain
-# --- OpenAI Direct ---
-OPENAI_API_KEY=sk-proj-xxxx...
-OPENAI_MODEL=gpt-4o
-
-# --- Azure OpenAI (Prioritized if uncommented) ---
-AZURE_OPENAI_API_KEY=your-key
-AZURE_OPENAI_ENDPOINT=https://your-endpoint.cognitiveservices.azure.com/
-AZURE_OPENAI_API_VERSION=2024-12-01-preview
-AZURE_OPENAI_DEPLOYMENT_NAME=gpt-5.4-mini-3
-```
+The framework will process the spec and output a ready-to-deploy folder in the ./build directory
 
 
 
