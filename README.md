@@ -84,7 +84,20 @@ Provider Agnostic: Built on the official openai Python SDK, seamlessly adaptable
 Prerequisites
 Python 3.9+
 
-An active OpenAI API Key (or Azure OpenAI endpoint credentials)
+An active OpenAI API Key (or Azure OpenAI endpoint credentials) - we support both options, your .env file should looks like this
+``` plain
+Plaintext
+# --- OpenAI Direct ---
+OPENAI_API_KEY=sk-proj-xxxx...
+OPENAI_MODEL=gpt-4o
+
+# --- Azure OpenAI (Prioritized if uncommented) ---
+AZURE_OPENAI_API_KEY= your key heree
+AZURE_OPENAI_ENDPOINT=https://your-end-point-here.cognitiveservices.azure.com/
+AZURE_OPENAI_API_VERSION=2024-12-01-preview 
+AZURE_OPENAI_DEPLOYMENT_NAME=gpt-5.4-mini-3
+
+```
 
 ### Installation
 1. Clone the repository:
