@@ -34,6 +34,43 @@ graph TD
     class C primary;
 ```
 
+ Detailed interaction sequence diagram in the README. The sequence diagram specifically shows how we handle the asynchronous data exchange with the OpenAI API to ensure deterministic code 
+ generation.
+ 
+```mermaid
+sequenceDiagram
+    autonumber
+    participant PE as "Partner Engineer"
+    participant CLI as "Python Orchestrator"
+    participant OA as "OpenAI API (GPT-4)"
+    participant FS as "Local Filesystem"
+
+    Note over CLI: Initialize OpenAI Client
+    PE->>CLI: run main.py --spec api_docs.md
+    CLI->>FS: Read api_docs.md
+    FS-->>CLI: Content Raw Text
+
+    activate CLI
+    Note over CLI: Construct extraction prompt
+    CLI->>OA: POST: Extract Auth/Endpoint Schema (JSON Mode)
+    activate OA
+    OA-->>CLI: Return Structured Schema JSON
+    deactivate OA
+    
+    Note over CLI: Validate schema (Pydantic)
+    Note over CLI: Construct generation prompt + Schema JSON
+    
+    CLI->>OA: POST: Generate Python & .conf files
+    activate OA
+    OA-->>CLI: Return Generated Code Blocks
+    deactivate OA
+
+    CLI->>FS: Write Splunk TA directory structure
+    CLI-->>PE: Output: ./build/Custom_Splunk_TA (Done)
+    deactivate CLI
+```
+
+
 ## ✨ Key Features
 Accelerated Deployment: Reduces the prototyping and implementation phase of custom Splunk integrations by 95%.
 
