@@ -102,8 +102,8 @@ AZURE_OPENAI_DEPLOYMENT_NAME=gpt-5.4-mini-3
 ### Installation
 1. Clone the repository:
 ``` bash
-git clone https://github.com/abokov/zero-to-splunk-ta-openai.git
-cd zero-to-splunk-ta-openai
+git clone git@github.com:abokov/openai-splunk-ta.git
+cd openai-splunk-ta
 ```
 
 2. Install dependencies:
