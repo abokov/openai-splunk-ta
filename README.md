@@ -89,7 +89,7 @@ An active OpenAI API Key (or Azure OpenAI endpoint credentials)
 ### Installation
 1. Clone the repository:
 ``` bash
-git clone [https://github.com/abokov/zero-to-splunk-ta-openai.git](https://github.com/abokov/zero-to-splunk-ta-openai.git)
+git clone https://github.com/abokov/zero-to-splunk-ta-openai.git
 cd zero-to-splunk-ta-openai
 ```
 
