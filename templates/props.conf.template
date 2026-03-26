@@ -1,0 +1,8 @@
+[{{ sourcetype }}]
+DATETIME_CONFIG = CURRENT
+INDEXED_EXTRACTIONS = json
+KV_MODE = none
+AUTO_KV_JSON = false
+category = Custom
+pulldown_type = 1
+description = Auto-generated TA for {{ sourcetype }}
