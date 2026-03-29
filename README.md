@@ -1,4 +1,4 @@
-# ⚡ Open AI Splunk TA: GenAI Deployment Framework
+# ⚡ Open AI Splunk TA: Gen AI Deployment Framework
 
 [![Python](https://img.shields.io/badge/Python-3.9%2B-blue.svg)](https://python.org)
 [![OpenAI](https://img.shields.io/badge/OpenAI-API-black.svg)](https://openai.com/)
