@@ -6,9 +6,11 @@
 
 ## Overview
 
+
+
 **OpenAI Splunk TA** is an AI deployment accelerator built to help Systems Integrators (SIs) and enterprise engineering teams transform API documentation into production-ready Splunk Technology Add-ons (TAs) in minutes, not days. 
 
-By leveraging the **OpenAI API** and advanced prompt chaining, this framework codifies architectural best practices into a repeatable, automated pipeline. It mentors technical teams toward self-sufficiency by removing the friction of manual Python scripting and regex formulation, accelerating customer time-to-value for complex data ingest pipelines.
+By use **OpenAI API** and advanced prompt chaining, this framework codifies architectural best practices into a repeatable, automated pipeline. It mentors technical teams toward self-sufficiency by removing the friction of manual Python scripting and regex formulation, accelerating customer time-to-value for complex data ingest pipelines.
 
 ## 🏗️ Architectural Pattern
 
